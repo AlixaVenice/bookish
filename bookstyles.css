@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background: linear-gradient(135deg, #6a0dad, #b19cd9);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+/* Container Styles */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background-image.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Book List Styles */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.book-card h3 {
+    font-size: 20px;
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.book-card .book-description {
+    font-style: italic;
+}
+
+.book-card .details-btn {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-card .details-btn:hover {
+    background-color: #b19cd9;
+}
+
+/* Hover effect for book cards */
+.book-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #6a0dad;
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Right-side Vertical Navigation */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -120px; /* Hide the menu off-screen initially */
+    width: 150px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 50px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    transition: right 0.5s ease;
+}
+
+/* Hover effect to show the menu */
+body:hover .nav-menu {
+    right: 0; /* Bring the menu fully into view */
+}
+
+/* Navigation link styles */
+.nav-menu a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+body {
+    position: relative;
+}
